@@ -1,0 +1,55 @@
+C:\Windows\System32>nmap -sS 192.168.219.0/24
+Starting Nmap 7.97 ( https://nmap.org ) at 2025-05-26 19:14 +0530
+Nmap scan report for 192.168.219.225
+Host is up (0.0043s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE
+53/tcp open  domain
+MAC Address: C2:7C:13:71:79:AE (Unknown)
+
+Nmap scan report for 192.168.219.4
+Host is up (0.00049s latency).
+Not shown: 994 closed tcp ports (reset)
+PORT    STATE SERVICE
+80/tcp  open  http
+135/tcp open  msrpc
+139/tcp open  netbios-ssn
+445/tcp open  microsoft-ds
+902/tcp open  iss-realsecure
+912/tcp open  apex-mesh
+
+Nmap done: 256 IP addresses (2 hosts up) scanned in 137.67 seconds
+
+C:\Windows\System32>nmap -sS -sV 192.168.219.4
+Starting Nmap 7.97 ( https://nmap.org ) at 2025-05-26 19:19 +0530
+Nmap scan report for 192.168.219.4
+Host is up (0.00076s latency).
+Not shown: 994 closed tcp ports (reset)
+PORT    STATE SERVICE         VERSION
+80/tcp  open  http            Microsoft IIS httpd 10.0
+135/tcp open  msrpc           Microsoft Windows RPC
+139/tcp open  netbios-ssn     Microsoft Windows netbios-ssn
+445/tcp open  microsoft-ds?
+902/tcp open  ssl/vmware-auth VMware Authentication Daemon 1.10 (Uses VNC, SOAP)
+912/tcp open  vmware-auth     VMware Authentication Daemon 1.0 (Uses VNC, SOAP)
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 8.39 seconds
+
+C:\Windows\System32>nmap -sS -sV 192.168.219.4 -o nmap.html
+Starting Nmap 7.97 ( https://nmap.org ) at 2025-05-26 19:51 +0530
+Nmap scan report for 192.168.219.4
+Host is up (0.0012s latency).
+Not shown: 994 closed tcp ports (reset)
+PORT    STATE SERVICE         VERSION
+80/tcp  open  http            Microsoft IIS httpd 10.0
+135/tcp open  msrpc           Microsoft Windows RPC
+139/tcp open  netbios-ssn     Microsoft Windows netbios-ssn
+445/tcp open  microsoft-ds?
+902/tcp open  ssl/vmware-auth VMware Authentication Daemon 1.10 (Uses VNC, SOAP)
+912/tcp open  vmware-auth     VMware Authentication Daemon 1.0 (Uses VNC, SOAP)
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 9.13 seconds
