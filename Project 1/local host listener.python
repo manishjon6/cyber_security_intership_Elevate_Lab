@@ -1,0 +1,14 @@
+from flask import Flask, request
+
+app = Flask(__name__)
+
+@app.route('/upload', methods=['POST'])
+def upload():
+ # Handle the uploaded data here
+       data = request.data  # Get the raw data sent to the server
+       print("Received data:", data)  # Print the data to the console
+       return "Data received", 200  # Respond with a success message
+
+if __name__ == '__main__':
+    app.run(host='127.0.0.1', port=5000)
+   
